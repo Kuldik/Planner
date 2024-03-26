@@ -4,6 +4,13 @@ import { UserModule } from './user/user.module'
 import { ConfigModule } from '@nestjs/config'
 
 @Module({
-	imports: [ConfigModule.forRoot(), AuthModule, UserModule],
+	imports: [
+		ConfigModule.forRoot(),
+		AuthModule,
+		UserModule,
+		// TaskModule,
+		// TimeBlockModule,
+		// PomodoroModule
+	],
 })
 export class AppModule {}
