@@ -16,10 +16,7 @@ class TimeBlockService {
 	}
 
 	async createTimeBlock(data: TypeTimeBlockFormState) {
-		const response = await axiosWithAuth.post<ITimeBlockResponse>(
-			this.BASE_URL,
-			data
-		)
+		const response = await axiosWithAuth.post(this.BASE_URL, data)
 		return response
 	}
 
