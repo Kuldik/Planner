@@ -1,15 +1,14 @@
 import axios, { type CreateAxiosDefaults } from 'axios'
 
+import { errorCatch } from './error'
 import {
 	getAccessToken,
 	removeFromStorage
-} from '../services/auth-token.service'
-
-import { errorCatch } from './error'
+} from '@/services/auth-token.service'
 import { authService } from '@/services/auth.service'
 
 const options: CreateAxiosDefaults = {
-	baseURL: 'http://localhost:3000',
+	baseURL: 'http://localhost:4200/api',
 	headers: {
 		'Content-Type': 'application/json'
 	},
@@ -34,11 +33,11 @@ axiosWithAuth.interceptors.response.use(
 		const originalRequest = error.config
 
 		if (
-			error?.response?.status === 401 ||
-			errorCatch(error) === 'jwt expired' ||
-			(errorCatch(error) === 'jwt must be provided' &&
-				error.config &&
-				!error.config._isRetry)
+			(error?.response?.status === 401 ||
+				errorCatch(error) === 'jwt expired' ||
+				errorCatch(error) === 'jwt must be provided') &&
+			error.config &&
+			!error.config._isRetry
 		) {
 			originalRequest._isRetry = true
 			try {
@@ -48,6 +47,7 @@ axiosWithAuth.interceptors.response.use(
 				if (errorCatch(error) === 'jwt expired') removeFromStorage()
 			}
 		}
+
 		throw error
 	}
 )
