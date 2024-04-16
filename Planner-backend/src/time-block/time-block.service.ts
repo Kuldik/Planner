@@ -12,7 +12,6 @@ export class TimeBlockService {
 				userId,
 			},
 			orderBy: {
-				// ask - increase ; desc - decrease
 				order: 'asc',
 			},
 		})

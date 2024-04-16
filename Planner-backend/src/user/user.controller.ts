@@ -9,7 +9,7 @@ import {
 } from '@nestjs/common'
 import { Auth } from 'src/auth/decorators/auth.decorator'
 import { CurrentUser } from 'src/auth/decorators/user.decorator'
-import { UserDto } from 'src/user/dto/user.dto'
+import { UserDto } from './dto/user.dto'
 import { UserService } from './user.service'
 
 @Controller('user/profile')
