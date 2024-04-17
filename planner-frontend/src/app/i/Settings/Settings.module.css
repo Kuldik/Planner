@@ -1,0 +1,9 @@
+.form {
+  width: 50%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}/*# sourceMappingURL=Settings.module.css.map */
