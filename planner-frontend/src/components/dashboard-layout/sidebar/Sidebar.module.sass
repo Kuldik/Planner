@@ -1,1 +1,62 @@
+
 .wrapper
+    border-right: 1px solid
+    border-right-color: rgba(255,255,255,.12)
+    height: 100%
+    --tw-bg-opacity: 1
+    background-color: rgb(20 21 21 / var(--tw-bg-opacity))
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding-left: 1rem
+    padding-right: 1rem
+
+    .link
+        display: flex
+        align-items: center
+        gap: 0.625rem
+        padding: 1.3599rem
+        border-bottom: 1px solid rgba(255,255,255,.12)
+        text-decoration: none
+
+        .span
+            font-size: 1.5rem
+            font-weight: bold
+            position: relative
+            color: #ffffff
+
+            .spanPrescrypt
+                color: #ffffff82
+                position: absolute
+                top: -0.25rem
+                right: -1.25rem
+                font-size: 0.75rem
+                opacity: 0.4
+                transform: rotate(18deg)
+                font-weight: normal
+
+    .btn
+        padding: 0.75rem
+        position: relative
+        color: #ffffff
+
+        .menu
+            color: #ffffff82
+
+    .footer
+        font-size: 0.75rem
+        opacity: 0.4
+        font-weight: normal
+        text-align: center
+        padding: 1.4rem
+
+        .git
+            --tw-text-opacity: 1
+            color: rgb(117, 81, 255)
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+            transition-duration: 266ms
+            text-decoration: none
+
+            &:hover
+                color: #ffffff

@@ -9,5 +9,5 @@
     }
   }
   .loader {
-    animation: spin 0.1s linear infinite;
+    animation: spin 1s linear infinite;
   }
