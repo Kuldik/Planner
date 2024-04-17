@@ -22,8 +22,14 @@
 .wrapper .labelLg {
   font-size: 1.875rem;
 }
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .loader {
+  animation: spin 1s linear infinite;
   display: flex;
   justify-content: center;
   margin-top: 1.5rem;

@@ -1,14 +1,13 @@
 .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-    animation: spin 1s linear infinite;
-    height: 1.25rem;
-    width: 1.25rem;
-    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-}/*# sourceMappingURL=Loader.module.css.map */
+  @keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+  }
+  .loader {
+    animation: spin 0.1s linear infinite;
+  }
