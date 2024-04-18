@@ -1,0 +1,29 @@
+.rdp {
+  --rdp-cell-size: 32px;
+  --rdp-caption-font-size: 17px;
+  --rdp-background-color: rgba(255, 255, 255, 0.2);
+  --rdp-accent-color: #7551ff;
+}
+
+.wrapper {
+  position: relative;
+}
+.wrapper .btn {
+  position: absolute;
+  top: -0.5rem;
+  right: -1rem;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+.wrapper .btn:hover {
+  opacity: 0.1;
+}
+.wrapper .dayPicker {
+  position: absolute;
+  padding: 0.625rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 21 21/var(--tw-bg-opacity));
+  z-index: 10;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}/*# sourceMappingURL=DatePicker.module.css.map */

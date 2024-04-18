@@ -1,0 +1,39 @@
+.wrapper {
+  font-weight: normal;
+  display: grid;
+  grid-template-columns: 1.4fr 0.4fr 0.4fr 0.1fr;
+  position: relative;
+}
+.wrapper.completed > div > span > input {
+  font-style: italic;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.wrapper:hover {
+  background-color: #1c1f1f;
+}
+.wrapper > div > span .grip {
+  opacity: 0.2;
+  transition: opacity 0.3s;
+  margin-left: -3px;
+  margin-right: -1px;
+}
+.wrapper > div > span .grip:hover, .wrapper > div > span .grip:active {
+  opacity: 1;
+}
+.wrapper .gripContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: 2.5;
+  width: 100%;
+}
+.wrapper .actions {
+  text-transform: capitalize;
+}
+.wrapper .delete {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.wrapper .delete:hover {
+  opacity: 1;
+}/*# sourceMappingURL=ListRow.module.css.map */

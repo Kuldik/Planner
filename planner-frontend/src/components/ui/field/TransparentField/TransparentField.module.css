@@ -1,0 +1,9 @@
+.input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+}
+.input:focus {
+  outline: none;
+  box-shadow: none;
+}/*# sourceMappingURL=TransparentField.module.css.map */

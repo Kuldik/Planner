@@ -1,0 +1,42 @@
+
+.wrapper
+    font-weight: normal
+    display: grid
+    grid-template-columns: 1.4fr 0.4fr 0.4fr 0.1fr
+    position: relative
+
+    &.completed
+        > div > span > input
+            font-style: italic
+            text-decoration: line-through
+            opacity: 0.5
+
+    &:hover
+        background-color: #1c1f1f
+
+    > div > span
+        .grip
+            opacity: 0.2
+            transition: opacity 0.3s
+            margin-left: -3px
+            margin-right: -1px
+
+            &:hover,
+            &:active
+                opacity: 1
+
+    .gripContainer
+        display: inline-flex
+        align-items: center
+        gap: 2.5
+        width: 100%
+
+    .actions
+        text-transform: capitalize
+
+    .delete
+        opacity: 0.5
+        transition: opacity 0.3s
+
+        &:hover
+            opacity: 1
