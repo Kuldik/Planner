@@ -1,1 +1,1 @@
-{"version":3,"sources":["Settings.module.sass","Settings.module.css"],"names":[],"mappings":"AAAA;EACI,UAAA;ACCJ;;ADCA;EACI,aAAA;EACA,qCAAA;EACA,WAAA;ACEJ","file":"Settings.module.css"}
+{"version":3,"sources":["Settings.module.sass","Settings.module.css"],"names":[],"mappings":"AAEA;EACI,aAAA;EACA,mBAAA;EACA,UAAA;EACA,WAAA;ACDJ;ADGI;EACI,UAAA;EACA,WAAA;ACDR","file":"Settings.module.css"}

@@ -1,9 +1,10 @@
-.form {
-  width: 50%;
-}
-
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: row;
+  width: 60%;
   gap: 2.5rem;
+}
+.wrapper .formField {
+  width: 50%;
+  gap: 0.5rem;
 }/*# sourceMappingURL=Settings.module.css.map */

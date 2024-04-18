@@ -1,11 +1,13 @@
 'use client'
 import { TypeUserForm } from "@/types/auth.types";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { useInitialData } from "./hooks/useInitialData";
-import { useUpdateSettings } from "./hooks/useUpdateSettings";
+import { useInitialData } from "./useInitialData";
+import { useUpdateSettings } from "./useUpdateSettings";
 import styles from './Settings.module.css'
 import { Field } from "@/components/ui/field/Field";
 import { Button } from "@/components/ui/buttons/Button";
+import { useProfile } from "@/hooks/useProfile";
+import Loader from "@/components/ui/loader/Loader";
 
 export function Settings() {
 
@@ -25,8 +27,9 @@ export function Settings() {
 			password: password || undefined
 		})
 	}
+    const {data, isLoading} = useProfile()
 
-  return (
+  return isLoading ? (<Loader/>) : (
     <div>
         <form 
             className={styles.form}
@@ -34,7 +37,7 @@ export function Settings() {
         >
 
             <div className={styles.wrapper}>
-                <div>
+                <div className={styles.formField}>
                     <Field 
                         id="email"
                         label='Email' 
@@ -64,7 +67,7 @@ export function Settings() {
                     />
                 </div>
 
-                <div>
+                <div className={styles.formField}>
                     <Field
                         id="workInterval"
                         label='Work interval (min.): '
