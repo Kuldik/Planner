@@ -1,0 +1,25 @@
+.table {
+  width: 100%;
+  color: white;
+}
+.table .header {
+  display: grid;
+  grid-template-columns: 1.4fr 0.4fr 0.4fr 0.1fr;
+  border-radius: 0.25rem;
+  border-top: 1px solid;
+  border-color: rgba(255, 255, 255, 0.12);
+  text-align: left;
+  width: auto;
+  white-space: nowrap;
+}
+.table .label {
+  border-right: 1px solid;
+  border-color: rgba(255, 255, 255, 0.12);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.table .label:last-child {
+  border-righ: 0;
+}/*# sourceMappingURL=ListView.module.css.map */

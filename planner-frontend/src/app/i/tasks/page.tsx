@@ -6,17 +6,17 @@ import { useProfile } from "@/hooks/useProfile";
 import { Heading } from "@/components/ui/heading/Heading";
 
 
+
 export const metadata: Metadata = {
-    title: 'Tasks',
-    ...NO_INDEX_PAGE
-   };
-   export function NameLayout() {
-    const {data, isLoading} = useProfile()
- 
-    return isLoading ? (<Loader/>) : (
-        <div>
-            <Heading title="Tasks"/>
-            <TasksView/>
-        </div>
-    )
+	title: 'Tasks',
+	...NO_INDEX_PAGE
+}
+
+export default function TasksPage() {
+	return (
+		<div>
+			<Heading title='Tasks' />
+			<TasksView />
+		</div>
+	)
 }

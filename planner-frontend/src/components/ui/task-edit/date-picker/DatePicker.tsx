@@ -8,7 +8,6 @@ import 'react-day-picker/dist/style.css'
 
 import { useOutside } from '@/hooks/useOutside'
 
-import './DatePicker.scss'
 import { formatCaption } from '../date-picker-caption/DatePickerCaption'
 import styles from './DatePicker.module.css'
 
@@ -42,7 +41,7 @@ export function DatePicker({
 
     return (
         <div className={styles.wrapper}>
-            <button onClick={() => setIsShow}>
+            <button className={styles.btnPicker} onClick={() => setIsShow}>
                 {value ? dayjs(value).format('LL') : 'Choose date'}
             </button>
             {value && (

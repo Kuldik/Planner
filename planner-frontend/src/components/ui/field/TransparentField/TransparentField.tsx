@@ -1,6 +1,5 @@
-import cn from 'clsx'
 import { type InputHTMLAttributes, forwardRef } from 'react'
-import styles from './Field.module.css'
+import styles from './TransparentField.module.css'
 
 type TypeTransparentField = InputHTMLAttributes<HTMLInputElement>
 

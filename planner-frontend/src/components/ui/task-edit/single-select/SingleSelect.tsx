@@ -31,6 +31,7 @@ export function SingleSelect({
                     e.preventDefault()
                     setIsShow(!isShow)
                 }}
+                className={styles.btnSelect}
             >
                 {getValue() ? (
 					<Badge
@@ -44,17 +45,6 @@ export function SingleSelect({
 					<Badge>Click for select</Badge>
 				)}
             </button>
-            {value && (
-                <button
-                    className={styles.btn}
-                    onClick={e => {
-                        e.preventDefault()
-                        onChange('')
-                    }}
-                >
-                    <X size={14}/>
-                </button>
-            )}
             {isShow && (
                 <div 
                     className={styles.dropdown}

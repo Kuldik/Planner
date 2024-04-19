@@ -1,5 +1,6 @@
 import type { CSSProperties, PropsWithChildren } from 'react'
 import { tv } from 'tailwind-variants'
+import styles from './Badge.module.css'
 
 interface IBadge {
 	className?: string
@@ -24,16 +25,11 @@ const badge = tv({
 
 export function Badge({
 	children,
-	className,
-	variant,
 	style
 }: PropsWithChildren<IBadge>) {
 	return (
 		<span
-			className={badge({
-				backgroundColor: variant as 'low' | 'high' | 'medium',
-				className
-			})}
+			className={styles.badge}
 			style={style}
 		>
 			{children}

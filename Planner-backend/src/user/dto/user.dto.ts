@@ -5,7 +5,7 @@ import {
 	IsString,
 	Max,
 	Min,
-	MinLength
+	MinLength,
 } from 'class-validator'
 
 export class PomodoroSettingsDto {
@@ -37,7 +37,7 @@ export class UserDto extends PomodoroSettingsDto {
 
 	@IsOptional()
 	@MinLength(6, {
-		message: 'Password must be at least 6 characters long'
+		message: 'Password must be at least 6 characters long',
 	})
 	@IsString()
 	password?: string

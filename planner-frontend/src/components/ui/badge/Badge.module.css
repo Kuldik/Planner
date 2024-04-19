@@ -1,0 +1,10 @@
+.badge {
+  padding: 0.25rem;
+  border-radius: 7px;
+  background-color: rgba(250, 250, 250, 0.231372549);
+  color: white;
+  transition: opacity 0.3s;
+}
+.badge:hover {
+  opacity: 0.5;
+}/*# sourceMappingURL=Badge.module.css.map */

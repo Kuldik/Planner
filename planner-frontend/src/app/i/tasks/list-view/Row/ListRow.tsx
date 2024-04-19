@@ -2,20 +2,17 @@ import type { ITaskResponse, TypeTaskFormState } from "@/types/task.types";
 import type { Dispatch, SetStateAction } from "react";
 import { useTaskDebounce } from "../../hooks/useTaskDebouce";
 import { Controller, useForm } from "react-hook-form";
-import styles from './ListRow.module.scss'
+import styles from './ListRow.module.css'
 import { GripVertical, Trash } from "lucide-react";
-import Checkbox from "@/components/ui/checkbox/checkbox";
 import { DatePicker } from "@/components/ui/task-edit/date-picker/DatePicker";
 import { SingleSelect } from "@/components/ui/task-edit/single-select/SingleSelect";
 import { Loader } from "lucide-react";
 import { useDeleteTask } from "../../hooks/useDeleteTask";
-import cn from 'clsx'
 import { TransparentField } from "@/components/ui/field/TransparentField/TransparentField";
-
-
+import Checkboxes from "@/components/ui/checkbox/checkbox";
 interface IListRow {
   item: ITaskResponse
-  setItems: Dispatch<SetStateAction<ITaskResponse[]>>
+  setItems: Dispatch<SetStateAction<ITaskResponse[] | undefined>>
 }
 export function ListRow({item, setItems}: IListRow) {
   const {register, control, watch} = useForm<TypeTaskFormState>({
@@ -32,31 +29,30 @@ export function ListRow({item, setItems}: IListRow) {
   const {deleteTask, isDeletePending} = useDeleteTask()
   return (
     <div 
-      className={cn(
-        styles.row,
-        watch('isCompleted') ? styles.completed : '',
-        'animation-opacity'
-      )}
-        >
-        <div>
+      className={styles.row}
+    >
+        <div className={styles.nameInputs}>
           <span className={styles.gripContainer}>
-            <button aria-activedescendant="todo-item">
+            <button aria-activedescendant="todo-item" className={styles.btn}>
               <GripVertical className={styles.grip}/>
             </button>
 
-            <Controller 
-              control={control} 
-              name="isCompleted" 
-              render={({ field: {value, onChange} }) => (
-                <Checkbox checked={value} onChange={onChange}/>
-              )}
-            />
+            <span className={styles.checkboxContainer}>
+              <Controller 
+                control={control} 
+                name="isCompleted" 
+                render={({ field: {value, onChange} }) => (
+                  <Checkboxes checked={value} onChange={onChange}/>
+                )}
+              />
+            </span>
+            
 
             <TransparentField {...register('name')} />
           </span>
         </div>
 
-        <div>
+        <div className={styles.dateBtn}>
           <Controller
             control={control}
             name="createdAt"
@@ -84,7 +80,7 @@ export function ListRow({item, setItems}: IListRow) {
               )}
             />
         </div>
-        <div>
+        <div className={styles.deleteBtn}>
           <button 
             onClick={() =>
               item.id ? deleteTask(item.id) : setItems(prev => prev?.slice(0, -1))

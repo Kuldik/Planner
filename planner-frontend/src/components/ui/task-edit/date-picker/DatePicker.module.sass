@@ -9,13 +9,14 @@
 
     .btn
         position: absolute
-        top: -0.5rem
-        right: -1rem
-        opacity: 0.3
+        top: -1.1rem
+        right: -1.55rem
         transition: opacity 0.3s
-
+        background-color: transparent
+        border: none
+        color: rgb(117, 81, 255)
         &:hover
-            opacity: 0.1
+            opacity: 0.4
 
     .dayPicker
         position: absolute
@@ -25,7 +26,12 @@
         z-index: 10
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1)
         border-radius: 0.5rem
-        @if $position == 'left'
-            left: -1rem
-        @else
-            right: -1rem
+
+    .btnPicker
+        background-color: transparent
+        border: none
+        color: white
+        font-size: 1.1rem
+        transition: opacity 0.3s
+        &:hover
+            opacity: 0.4

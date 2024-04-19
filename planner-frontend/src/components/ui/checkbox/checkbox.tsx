@@ -1,6 +1,18 @@
+import * as React from 'react';
+import Checkbox from '@mui/material/Checkbox';
 import styles from './checkbox.module.css'
 
-const Checkbox = (props: {
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
+// export function Checkboxes() {
+//   return (
+//     <div>
+//       <Checkbox {...label} className={styles.checkbox} />
+//     </div>
+//   );
+// }
+
+const Checkboxes = (props: {
 	id?: string
 	extra?: string
 	color?:
@@ -20,16 +32,17 @@ const Checkbox = (props: {
 		| 'gray'
 	[x: string]: any
 }) => {
-	const { extra, color, id, ...rest } = props;
-return (
-        <input
-            id={id}
-            type='checkbox'
-            className={styles.defaultCheckbox}
-            name='weekly'
-            {...rest}
-        />
-    );
+	const { extra, color, id, ...rest } = props
+	return (
+		<div>
+            <Checkbox
+                {...label} 
+                className={styles.checkbox} 
+                id={id} 
+                {...rest}
+            />
+        </div>
+	)
 }
 
-export default Checkbox
+export default Checkboxes

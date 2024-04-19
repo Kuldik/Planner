@@ -1,42 +1,85 @@
 
+.row
+    display: grid
+    grid-template-columns: 1.4fr 0.4fr 0.4fr 0.01fr
+    background-color: #0e0f0f
+    border-top: 1px solid rgba(255,255,255,.12)
+    text-align: left
+    width: auto
+
+    white-space: nowrap
+    &:hover
+        background-color: transparent
+
+.gripContainer
+    display: inline-flex
+    align-items: center
+    gap: 2.5
+    width: 100%
+
+.btn
+    background-color: transparent
+    padding: 0
+    border: none
+
+.grip
+    cursor: grab
+    font-size: 10px
+    color: white
+    background-color: trasnparent
+    pad
+
 .wrapper
     font-weight: normal
     display: grid
     grid-template-columns: 1.4fr 0.4fr 0.4fr 0.1fr
     position: relative
 
-    &.completed
-        > div > span > input
-            font-style: italic
-            text-decoration: line-through
-            opacity: 0.5
-
-    &:hover
-        background-color: #1c1f1f
-
-    > div > span
-        .grip
-            opacity: 0.2
-            transition: opacity 0.3s
-            margin-left: -3px
-            margin-right: -1px
-
-            &:hover,
-            &:active
-                opacity: 1
-
-    .gripContainer
-        display: inline-flex
-        align-items: center
-        gap: 2.5
-        width: 100%
-
     .actions
         text-transform: capitalize
 
-    .delete
-        opacity: 0.5
-        transition: opacity 0.3s
+.delete
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: transparent
+    border: none
+    color: rgb(117, 81, 255)
+    opacity: 0.5
+    transition: color 0.3s
 
-        &:hover
-            opacity: 1
+    &:hover
+        color: white
+
+.nameInputs
+    border-right: 1px solid rgba(255, 255, 255, 0.12)
+    font-weight: bold
+    padding-top: 0.5rem
+    padding-bottom: 0.5rem
+    padding-left: 1rem
+    div
+        span
+            padding: 5px
+            svg
+                color: rgb(117, 81, 255)
+.dateBtn
+    display: flex
+    align-items: center
+    border-right: 1px solid rgba(255, 255, 255, 0.12)
+    font-weight: bold
+    padding-top: 0.5rem
+    padding-bottom: 0.5rem
+    padding-left: 1rem
+.actions
+    border-right: 1px solid rgba(255, 255, 255, 0.12)
+    font-weight: bold
+    padding-top: 0.5rem
+    padding-bottom: 0.5rem
+    padding-left: 1rem
+    text-transform: capitalize
+
+.deleteBtn
+    display: flex
+    border-right: 1px solid rgba(255, 255, 255, 0.12)
+    font-weight: bold
+    padding: 0.5rem
