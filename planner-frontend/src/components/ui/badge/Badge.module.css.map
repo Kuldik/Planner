@@ -1,1 +1,1 @@
-{"version":3,"sources":["Badge.module.sass","Badge.module.css"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,kBAAA;EACA,kDAAA;EACA,YAAA;EACA,wBAAA;ACCJ;ADAI;EACI,YAAA;ACER","file":"Badge.module.css"}
+{"version":3,"sources":["Badge.module.sass","Badge.module.css"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,kBAAA;EACA,kDAAA;EACA,WAAA;EACA,wBAAA;EACA,0BAAA;EACA,gBAAA;ACCJ;ADAI;EACI,YAAA;ACER","file":"Badge.module.css"}

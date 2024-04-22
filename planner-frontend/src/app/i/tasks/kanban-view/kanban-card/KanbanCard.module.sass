@@ -1,0 +1,65 @@
+.card
+    display: block
+    border: 1px solid rgba(255, 255, 255, 0.12)
+    border-radius: 0.25rem
+    margin-top: 1rem
+    padding: 0.5rem
+    position: relative
+    border-radius: 0.5rem
+    border-botton: none
+    background-color: #0e0f0f
+
+    &.completed
+        font-style: italic
+        text-decoration: line-through
+        opacity: 0.3
+
+    .grip
+        opacity: 0.2
+        transition: opacity 0.3s
+
+        &:hover,
+        &:active
+            .grip
+                opacity: 0.8
+
+    .btn
+        background-color: transparent
+        padding: 0
+        color: #fff
+        border: none
+        svg
+            color: #fff
+            opacity: 1
+            cursor: grab
+
+    .cardHeader
+        display: flex
+        align-items: center
+        font-size: 93%
+        flex-direction: row-reverse
+        div
+            span
+                padding: 5px
+            svg
+                color: rgb(117, 81, 255)
+
+    .cardBody > div
+        margin-bottom: 1.25rem
+        min-width: 6rem
+
+    .cardActions
+        position: absolute
+        bottom: 0.1rem
+        right: 0.1rem
+        opacity: 0.4
+
+    .deleteBtn
+        background-color: transparent
+        border: none
+        font-size: 2rem
+        color: rgb(117, 81, 255)
+        transition: color 0.3s
+
+        &:hover
+            color: white

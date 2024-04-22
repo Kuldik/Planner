@@ -16,18 +16,16 @@ dayjs.extend(LocalizedFormat)
 interface IDatePicker {
 	onChange: (value: string) => void
 	value: string
-	position?: 'left' | 'right'
 }
 
 export function DatePicker({
-    onChange,
-    value,
-    position = 'right'
+	onChange,
+	value,
 }: IDatePicker) {
-    const [selected, setSelected] = useState<Date>()
-    const {isShow, setIsShow, ref} = useOutside(false)
+	const [selected, setSelected] = useState<Date>()
+	const { isShow, setIsShow, ref } = useOutside(false)
 
-    const handleDaySelect: SelectSingleEventHandler = date => {
+	const handleDaySelect: SelectSingleEventHandler = date => {
 		const ISOdate = date?.toISOString()
 
 		setSelected(date)
@@ -40,7 +38,10 @@ export function DatePicker({
 	}
 
     return (
-        <div className={styles.wrapper}>
+        <div 
+            className={styles.wrapper}
+            ref={ref}
+         >
             <button className={styles.btnPicker} onClick={() => setIsShow}>
                 {value ? dayjs(value).format('LL') : 'Choose date'}
             </button>
@@ -53,18 +54,23 @@ export function DatePicker({
                 </button>
             )}
             {isShow && (
-                <div className={styles.dayPicker}>
-                    <DayPicker
-                        fromYear={2024}
-                        toYear={2077}
-                        initialFocus={isShow}
-                        mode='single'
-                        defaultMonth={selected}
-                        selected={selected}
-                        onSelect={handleDaySelect}
-                        weekStartsOn={1}
-                        formatters={{formatCaption}}
-                    />
+                <div 
+                    className={styles.dayPicker}
+                    style={{
+                        top: 'calc(100% + .7rem)'
+                    }}
+                >
+                   <DayPicker
+						fromYear={2023}
+						toYear={2054}
+						initialFocus={isShow}
+						mode='single'
+						defaultMonth={selected}
+						selected={selected}
+						onSelect={handleDaySelect}
+						weekStartsOn={1}
+						formatters={{ formatCaption }}
+					/>
                 </div>
             )}
         </div>

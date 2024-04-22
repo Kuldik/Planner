@@ -9,6 +9,16 @@
   background-color: transparent;
   border: none;
 }
+.wrapper .btnX {
+  position: absolute;
+  transition: opacity 0.3s;
+  background-color: transparent;
+  border: none;
+  color: rgb(117, 81, 255);
+}
+.wrapper .btnX:hover {
+  opacity: 0.4;
+}
 .wrapper .btn {
   position: absolute;
   top: 0;
@@ -42,4 +52,7 @@
 }
 .wrapper .dropdown .show:last-child {
   margin-bottom: 0;
+}
+.wrapper .dropdown .show span {
+  color: #ffffff;
 }/*# sourceMappingURL=SingleSelect.module.css.map */

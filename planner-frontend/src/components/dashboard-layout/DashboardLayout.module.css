@@ -9,4 +9,15 @@
   overflow-x: hidden;
   max-height: 100vh;
   position: relative;
+}
+.main::-webkit-scrollbar {
+  width: 15px;
+}
+.main::-webkit-scrollbar-track {
+  background: transparent;
+}
+.main::-webkit-scrollbar-thumb {
+  background-color: rgb(117, 81, 255);
+  border-radius: 20px;
+  border: 3px solid #050c26;
 }/*# sourceMappingURL=DashboardLayout.module.css.map */

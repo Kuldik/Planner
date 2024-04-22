@@ -1,14 +1,9 @@
-
-.wrapper
+.board
     display: grid
-    min-height: 100vh
-    grid-template-columns: 1.2fr 6fr
-    grid-gap: 1rem
-
-.main
-    overflow-x: hidden
-    max-height: 100vh
-    position: relative
+    grid-auto-flow: column
+    gap: 4rem
+    width: 100%
+    overflow-x: auto
 
     &::-webkit-scrollbar
         width: 15px
@@ -17,6 +12,6 @@
         background: transparent
 
     &::-webkit-scrollbar-thumb
-        background-color: rgb(117, 81, 255)
+        background-color: rgba(116, 81, 255, 0.415)
         border-radius: 20px
         border: 3px solid #050c26

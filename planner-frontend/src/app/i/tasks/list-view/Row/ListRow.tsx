@@ -10,23 +10,26 @@ import { Loader } from "lucide-react";
 import { useDeleteTask } from "../../hooks/useDeleteTask";
 import { TransparentField } from "@/components/ui/field/TransparentField/TransparentField";
 import Checkboxes from "@/components/ui/checkbox/checkbox";
+
 interface IListRow {
-  item: ITaskResponse
-  setItems: Dispatch<SetStateAction<ITaskResponse[] | undefined>>
+	item: ITaskResponse
+	setItems: Dispatch<SetStateAction<ITaskResponse[] | undefined>>
 }
-export function ListRow({item, setItems}: IListRow) {
-  const {register, control, watch} = useForm<TypeTaskFormState>({
-    defaultValues: {
-      name: item.name,
-      isCompleted: item.isCompleted,
-      priority: item.priority,
-      createdAt: item.createdAt,
-    }
-  })
 
-  useTaskDebounce({watch, itemId: item.id})
+export function ListRow({ item, setItems }: IListRow) {
+	const { register, control, watch } = useForm<TypeTaskFormState>({
+		defaultValues: {
+			name: item.name,
+			isCompleted: item.isCompleted,
+			createdAt: item.createdAt,
+			priority: item.priority
+		}
+	})
 
-  const {deleteTask, isDeletePending} = useDeleteTask()
+	useTaskDebounce({ watch, itemId: item.id })
+
+	const { deleteTask, isDeletePending } = useDeleteTask()
+
   return (
     <div 
       className={styles.row}
@@ -46,18 +49,16 @@ export function ListRow({item, setItems}: IListRow) {
                 )}
               />
             </span>
-            
 
             <TransparentField {...register('name')} />
           </span>
         </div>
-
         <div className={styles.dateBtn}>
           <Controller
             control={control}
             name="createdAt"
-            render={({ field: {value, onChange} }) => (
-              <DatePicker 
+            render={({ field: { value, onChange } }) => (
+              <DatePicker
                 onChange={onChange}
                 value={value || ''}
               />
@@ -67,9 +68,9 @@ export function ListRow({item, setItems}: IListRow) {
         <div className={styles.actions}>
           <Controller
               control={control}
-              name="createdAt"
-              render={({ field: {value, onChange} }) => (
-                <SingleSelect 
+              name="priority"
+              render={({ field: { value, onChange } }) => (
+                <SingleSelect
                   data={['high', 'medium', 'low'].map(item => ({
                     value: item,
                     label: item

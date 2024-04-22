@@ -1,0 +1,18 @@
+.board {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 4rem;
+  width: 100%;
+  overflow-x: auto;
+}
+.board::-webkit-scrollbar {
+  width: 15px;
+}
+.board::-webkit-scrollbar-track {
+  background: transparent;
+}
+.board::-webkit-scrollbar-thumb {
+  background-color: rgba(116, 81, 255, 0.415);
+  border-radius: 20px;
+  border: 3px solid #050c26;
+}/*# sourceMappingURL=KanbanView.module.css.map */

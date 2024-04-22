@@ -4,7 +4,7 @@
 }
 .table .header {
   display: grid;
-  grid-template-columns: 1.4fr 0.4fr 0.4fr 0.1fr;
+  grid-template-columns: 1.4fr 0.4fr 0.4fr 0.07fr;
   border-radius: 0.25rem;
   border-top: 1px solid;
   border-color: rgba(255, 255, 255, 0.12);

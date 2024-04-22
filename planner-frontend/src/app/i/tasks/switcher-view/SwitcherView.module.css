@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.wrapper .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  transition: opacity 0.3s;
+}
+.wrapper .btn:hover {
+  opacity: 0.5;
+}/*# sourceMappingURL=SwitcherView.module.css.map */

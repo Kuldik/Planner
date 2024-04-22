@@ -1,0 +1,66 @@
+.card {
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  position: relative;
+  border-radius: 0.5rem;
+  border-botton: none;
+  background-color: #0e0f0f;
+}
+.card.completed {
+  font-style: italic;
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+.card .grip {
+  opacity: 0.2;
+  transition: opacity 0.3s;
+}
+.card .grip:hover .grip, .card .grip:active .grip {
+  opacity: 0.8;
+}
+.card .btn {
+  background-color: transparent;
+  padding: 0;
+  color: #fff;
+  border: none;
+}
+.card .btn svg {
+  color: #fff;
+  opacity: 1;
+  cursor: grab;
+}
+.card .cardHeader {
+  display: flex;
+  align-items: center;
+  font-size: 93%;
+  flex-direction: row-reverse;
+}
+.card .cardHeader div span {
+  padding: 5px;
+}
+.card .cardHeader div svg {
+  color: rgb(117, 81, 255);
+}
+.card .cardBody > div {
+  margin-bottom: 1.25rem;
+  min-width: 6rem;
+}
+.card .cardActions {
+  position: absolute;
+  bottom: 0.1rem;
+  right: 0.1rem;
+  opacity: 0.4;
+}
+.card .deleteBtn {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: rgb(117, 81, 255);
+  transition: color 0.3s;
+}
+.card .deleteBtn:hover {
+  color: white;
+}/*# sourceMappingURL=KanbanCard.module.css.map */
