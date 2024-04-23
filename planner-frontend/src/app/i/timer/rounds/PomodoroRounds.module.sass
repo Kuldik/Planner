@@ -1,0 +1,56 @@
+.container
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 0.5rem
+
+.roundsContainer
+    display: flex
+    gap: 0.75rem
+    align-items: center
+    justify-content: center
+    margin-top: 0.25rem
+
+.button
+    opacity: 0.5
+    transition: opacity 0.3s
+    background-color: transparent
+    border: none
+    color: white
+    &:hover:not(:disabled)
+        opacity: 1
+        svg
+            color: rgb(117, 81, 255)
+
+    &:disabled
+        opacity: 0.2
+        margin-top: 0.25rem
+
+.round
+    display: inline-block
+    border: 1px solid rgba(255,255,255,.12)
+    border-radius: 0.25rem
+    width: 1.25rem
+    height: 1.25rem
+    position: relative
+
+    &::before
+        content: ''
+        display: block
+        --tw-bg-opacity: 1
+        background-color: rgb(117 81 255 / var(--tw-bg-opacity))
+        border-radius: 0.25rem 0 0 0.25rem
+        transition: all 0.3s
+        position: absolute
+        top: 0
+        left: 0
+        width: 0
+        height: 100%
+
+    &.active::before
+        transition-duration: 1s
+        width: 40%
+
+    &.completed::before
+        border-radius: 0.25rem
+        width: 100%

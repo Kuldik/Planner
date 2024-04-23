@@ -1,0 +1,41 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.wrapper {
+  position: relative;
+  text-align: center;
+}
+.wrapper .formatText {
+  font-size: 7rem;
+  font-weight: 600;
+}
+.wrapper .btnPlay {
+  margin-top: 1.5rem;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  background-color: transparent;
+  border: none;
+  color: rgb(117, 81, 255);
+}
+.wrapper .btnPlay:hover {
+  opacity: 1;
+}
+.wrapper .btnRefresh {
+  position: absolute;
+  top: 0;
+  right: 5rem;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+  background-color: transparent;
+  border: none;
+  color: rgb(117, 81, 255);
+}
+.wrapper .btnRefresh:hover {
+  opacity: 0.9;
+  animation: rotate 1s infinite linear;
+}/*# sourceMappingURL=Pomodoro.module.css.map */

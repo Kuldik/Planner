@@ -12,6 +12,10 @@
   align-items: center;
   margin: 0.2rem;
 }
+.wrapper .container div {
+  text-decoration: none !important;
+  color: white;
+}
 .wrapper .info {
   text-align: right;
   margin-right: 0.75rem;
