@@ -1,0 +1,13 @@
+.form {
+  width: 60%;
+}
+.form .colorField {
+  margin-bottom: 1rem;
+}
+.form .colorPicker {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+.form .btn {
+  margin-top: 1.5rem;
+}/*# sourceMappingURL=TimeBlockingForm.module.css.map */

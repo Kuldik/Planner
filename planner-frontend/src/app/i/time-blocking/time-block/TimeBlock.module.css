@@ -1,0 +1,60 @@
+.timeBlock {
+  display: flex;
+  align-items: center;
+}
+
+.block {
+  border-radius: 0.25rem;
+  margin-bottom: 0.75rem;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+.block:active .grip, .block:hover .grip {
+  opacity: 1;
+}
+
+.grip {
+  opacity: 0.45;
+  transition: opacity 0.3s;
+  margin-left: -0.25rem;
+  margin-right: 0.25rem;
+}
+.grip:hover .grip, .grip:active .grip {
+  opacity: 1;
+}
+
+.name {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+.btn {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  margin-right: 0.5rem;
+  background-color: transparent;
+  border: none;
+}
+.btn:hover {
+  opacity: 1;
+}
+
+.gripBtn {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+}
+
+.btnDelete {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  background-color: transparent;
+  border: none;
+}
+.btnDelete:hover {
+  opacity: 1;
+}/*# sourceMappingURL=TimeBlock.module.css.map */

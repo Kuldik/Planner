@@ -83,3 +83,31 @@ input:checked.defaultCheckbox::before {
   }
 }/*# sourceMappingURL=globals.css.map */
 
+
+.tomato {
+  color:#e53e3e
+}
+
+.orchid {
+  color: #8b5cf6;
+}
+
+.coral {
+  color: #f87171
+}
+
+.seagreen { 
+  color: #2f855a;
+}
+
+.orange {
+  color: #ed8936;
+}
+
+.royalblue {
+  color: #3b82f6;
+}
+
+.lightslategray {
+  color: #718096
+}

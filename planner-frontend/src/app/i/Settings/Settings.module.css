@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: row;
-  width: 60%;
+  width: 50%;
   gap: 2.5rem;
 }
 .wrapper .formField {
