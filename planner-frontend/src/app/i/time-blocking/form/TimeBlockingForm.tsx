@@ -32,7 +32,6 @@ export function TimeBlockingForm() {
 
 		reset({
 			color: COLORS[COLORS.length - 1],
-			duration: 0,
 			name: '',
 			id: undefined,
 			order: 1
@@ -67,7 +66,7 @@ export function TimeBlockingForm() {
             </div>
 
             <div className={styles.colorField}>
-				<span className={styles.colorPicker}>Color:</span>
+				<span className={styles.colorPicker}>Color: <span className={styles.colorDescr}>(To create a new block, drag any of the existing ones, or reload the page)</span></span>
 				<Controller
 					control={control}
 					name='color'
