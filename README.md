@@ -1,6 +1,15 @@
 # :dizzy:Hi! This is Planner project.  :dizzy:
+
 ### This project collected functionality for creating a board or task planning list, a Pomodoro timer, and a time-blocking structure for time control :godmode:
 ### Below you will see a presentation of the functionality in GIF  :eyes:
+
+<hr>
+
+### Architecture:
+### Frontend: React 18.0.0, TypeScript, Next.js, React Tanstak Query, React Hook Form 
+### Backend: Nest.js, Prisma, PostgreSQL, Insomnia
+
+<br>
 
 # :computer: Authorization / Registration :computer:
 
