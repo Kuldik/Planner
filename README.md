@@ -6,8 +6,8 @@
 <hr>
 
 ### Architecture:
-### Frontend: React 18.0.0, TypeScript, Next.js, React Tanstak Query, React Hook Form 
-### Backend: Nest.js, Prisma, PostgreSQL, Insomnia
+### Frontend: ![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react)&nbsp;, ![TypeScript](https://img.shields.io/badge/-TypeScript-05122A?style=flat&logo=typescript)&nbsp;, ![Next.js](https://img.shields.io/badge/-Next.js-05122A?style=flat&logo=next.js)&nbsp;, ![ReactQuery](https://img.shields.io/badge/-ReactQuery-05122A?style=flat&logo=reactquery)&nbsp;, ![ReactHookForm](https://img.shields.io/badge/-ReactHookForm-05122A?style=flat&logo=reacthookform)&nbsp;
+### Backend: ![Nest.js](https://img.shields.io/badge/-Nest.js-05122A?style=flat&logo=nest.js)&nbsp;, ![Prisma](https://img.shields.io/badge/-Prisma-05122A?style=flat&logo=prisma)&nbsp;, ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-05122A?style=flat&logo=postgresql)&nbsp;, ![Insomnia](https://img.shields.io/badge/-Insomnia-05122A?style=flat&logo=insomnia)&nbsp;
 
 <br>
 
